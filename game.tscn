@@ -7,7 +7,10 @@
 [node name="Game" type="Node2D" unique_id=472559160]
 y_sort_enabled = true
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=303221111]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=656545523]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=303221111]
 offset_right = 1931.0
 offset_bottom = 1093.0
 
