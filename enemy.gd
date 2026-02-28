@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var player: CharacterBody2D = %Player
+@onready var player: Node2D = %Player
 var speed: int = 300
 
 func _physics_process(delta: float) -> void:
