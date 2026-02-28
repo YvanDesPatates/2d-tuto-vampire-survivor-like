@@ -20,5 +20,12 @@ shape = SubResource("CircleShape2D_dk5gl")
 position = Vector2(92, 0)
 texture = ExtResource("1_vk1bi")
 
-[node name="bulletSpawn" type="Marker2D" parent="GunPivot/Pistol" unique_id=1898726108]
+[node name="BulletSpawn" type="Marker2D" parent="GunPivot/Pistol" unique_id=1898726108]
+unique_name_in_owner = true
 position = Vector2(25, -10)
+
+[node name="ShootingTimer" type="Timer" parent="." unique_id=2096060986]
+wait_time = 0.4
+autostart = true
+
+[connection signal="timeout" from="ShootingTimer" to="." method="_on_shooting_timer_timeout"]
