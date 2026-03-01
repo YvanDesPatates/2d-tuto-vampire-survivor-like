@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://player.tscn" id="1_80nbo"]
 [ext_resource type="Script" uid="uid://dususlr2yr63q" path="res://game.gd" id="1_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://dq3r015sr1uql" path="res://pine_tree.tscn" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://dc1ta2hd88ke" path="res://wall.tscn" id="4_fc0e3"]
 
 [sub_resource type="Curve2D" id="Curve2D_7jktm"]
 _data = {
@@ -34,118 +35,120 @@ unique_name_in_owner = true
 position = Vector2(-140, -107)
 rotation = 0.008285898
 
-[node name="PineTree" parent="." unique_id=684713034 instance=ExtResource("2_e2o6t")]
+[node name="trees" type="Node" parent="." unique_id=1630851232]
+
+[node name="PineTree" parent="trees" unique_id=684713034 instance=ExtResource("2_e2o6t")]
 position = Vector2(308, 285)
 
-[node name="PineTree2" parent="." unique_id=828219202 instance=ExtResource("2_e2o6t")]
+[node name="PineTree2" parent="trees" unique_id=828219202 instance=ExtResource("2_e2o6t")]
 position = Vector2(925, 521)
 scale = Vector2(2, 2)
 
-[node name="PineTree3" parent="." unique_id=1626514516 instance=ExtResource("2_e2o6t")]
+[node name="PineTree3" parent="trees" unique_id=1626514516 instance=ExtResource("2_e2o6t")]
 position = Vector2(1527.0001, 742.00006)
 scale = Vector2(1.4194317, 1.4194317)
 
-[node name="PineTree4" parent="." unique_id=1464135936 instance=ExtResource("2_e2o6t")]
+[node name="PineTree4" parent="trees" unique_id=1464135936 instance=ExtResource("2_e2o6t")]
 position = Vector2(1519, 207)
 
-[node name="PineTree5" parent="." unique_id=456133785 instance=ExtResource("2_e2o6t")]
+[node name="PineTree5" parent="trees" unique_id=456133785 instance=ExtResource("2_e2o6t")]
 position = Vector2(243, 383)
 
-[node name="PineTree6" parent="." unique_id=560699408 instance=ExtResource("2_e2o6t")]
+[node name="PineTree6" parent="trees" unique_id=560699408 instance=ExtResource("2_e2o6t")]
 position = Vector2(1050, 589)
 
-[node name="PineTree7" parent="." unique_id=147535714 instance=ExtResource("2_e2o6t")]
+[node name="PineTree7" parent="trees" unique_id=147535714 instance=ExtResource("2_e2o6t")]
 position = Vector2(762, 392)
 
-[node name="PineTree8" parent="." unique_id=2112692812 instance=ExtResource("2_e2o6t")]
+[node name="PineTree8" parent="trees" unique_id=2112692812 instance=ExtResource("2_e2o6t")]
 position = Vector2(671, 628)
 
-[node name="PineTree9" parent="." unique_id=1192102694 instance=ExtResource("2_e2o6t")]
+[node name="PineTree9" parent="trees" unique_id=1192102694 instance=ExtResource("2_e2o6t")]
 position = Vector2(1411, 815)
 scale = Vector2(0.8, 0.8)
 
-[node name="PineTree11" parent="." unique_id=1525691632 instance=ExtResource("2_e2o6t")]
+[node name="PineTree11" parent="trees" unique_id=1525691632 instance=ExtResource("2_e2o6t")]
 position = Vector2(1053, 405)
 scale = Vector2(0.8, 0.8)
 
-[node name="PineTree10" parent="." unique_id=1286176574 instance=ExtResource("2_e2o6t")]
+[node name="PineTree10" parent="trees" unique_id=1286176574 instance=ExtResource("2_e2o6t")]
 position = Vector2(1690, 631)
 
-[node name="PineTree12" parent="." unique_id=1373205398 instance=ExtResource("2_e2o6t")]
+[node name="PineTree12" parent="trees" unique_id=1373205398 instance=ExtResource("2_e2o6t")]
 position = Vector2(847, 633)
 scale = Vector2(0.5, 0.5)
 
-[node name="PineTree16" parent="." unique_id=427771311 instance=ExtResource("2_e2o6t")]
+[node name="PineTree16" parent="trees" unique_id=427771311 instance=ExtResource("2_e2o6t")]
 position = Vector2(1376, 444)
 scale = Vector2(0.5, 0.5)
 
-[node name="PineTree17" parent="." unique_id=2055818944 instance=ExtResource("2_e2o6t")]
+[node name="PineTree17" parent="trees" unique_id=2055818944 instance=ExtResource("2_e2o6t")]
 position = Vector2(1316, 278)
 scale = Vector2(0.5, 0.5)
 
-[node name="PineTree18" parent="." unique_id=713989943 instance=ExtResource("2_e2o6t")]
+[node name="PineTree18" parent="trees" unique_id=713989943 instance=ExtResource("2_e2o6t")]
 position = Vector2(1168, 205)
 scale = Vector2(0.5, 0.5)
 
-[node name="PineTree19" parent="." unique_id=2082522431 instance=ExtResource("2_e2o6t")]
+[node name="PineTree19" parent="trees" unique_id=2082522431 instance=ExtResource("2_e2o6t")]
 position = Vector2(1023, 157.99998)
-rotation = 0.07753239
-scale = Vector2(0.5, 0.5)
+rotation = 0.07753238
+scale = Vector2(0.49999997, 0.49999997)
 
-[node name="PineTree20" parent="." unique_id=682009710 instance=ExtResource("2_e2o6t")]
+[node name="PineTree20" parent="trees" unique_id=682009710 instance=ExtResource("2_e2o6t")]
 position = Vector2(841, 148)
-rotation = 0.07753239
-scale = Vector2(0.5, 0.5)
+rotation = 0.07753238
+scale = Vector2(0.49999997, 0.49999997)
 
-[node name="PineTree21" parent="." unique_id=141339186 instance=ExtResource("2_e2o6t")]
+[node name="PineTree21" parent="trees" unique_id=141339186 instance=ExtResource("2_e2o6t")]
 position = Vector2(592, 202)
-rotation = 0.07753239
-scale = Vector2(0.5, 0.5)
+rotation = 0.07753238
+scale = Vector2(0.49999997, 0.49999997)
 
-[node name="PineTree22" parent="." unique_id=1120413167 instance=ExtResource("2_e2o6t")]
+[node name="PineTree22" parent="trees" unique_id=1120413167 instance=ExtResource("2_e2o6t")]
 position = Vector2(506, 326)
-rotation = 0.07753239
-scale = Vector2(0.5, 0.5)
+rotation = 0.07753238
+scale = Vector2(0.49999997, 0.49999997)
 
-[node name="PineTree23" parent="." unique_id=1499766305 instance=ExtResource("2_e2o6t")]
+[node name="PineTree23" parent="trees" unique_id=1499766305 instance=ExtResource("2_e2o6t")]
 position = Vector2(345, 443)
-rotation = 0.07753239
-scale = Vector2(0.5, 0.5)
+rotation = 0.07753238
+scale = Vector2(0.49999997, 0.49999997)
 
-[node name="PineTree24" parent="." unique_id=1519285141 instance=ExtResource("2_e2o6t")]
+[node name="PineTree24" parent="trees" unique_id=1519285141 instance=ExtResource("2_e2o6t")]
 position = Vector2(262.00003, 490)
-rotation = 0.07753239
-scale = Vector2(0.5, 0.5)
+rotation = 0.07753238
+scale = Vector2(0.49999997, 0.49999997)
 
-[node name="PineTree25" parent="." unique_id=545786472 instance=ExtResource("2_e2o6t")]
+[node name="PineTree25" parent="trees" unique_id=545786472 instance=ExtResource("2_e2o6t")]
 position = Vector2(244, 589)
-rotation = 0.07753239
-scale = Vector2(0.5, 0.5)
+rotation = 0.07753238
+scale = Vector2(0.49999997, 0.49999997)
 
-[node name="PineTree26" parent="." unique_id=967671682 instance=ExtResource("2_e2o6t")]
+[node name="PineTree26" parent="trees" unique_id=967671682 instance=ExtResource("2_e2o6t")]
 position = Vector2(472, 685)
-rotation = 0.07753239
-scale = Vector2(0.5, 0.5)
+rotation = 0.07753238
+scale = Vector2(0.49999997, 0.49999997)
 
-[node name="PineTree27" parent="." unique_id=541310911 instance=ExtResource("2_e2o6t")]
+[node name="PineTree27" parent="trees" unique_id=541310911 instance=ExtResource("2_e2o6t")]
 position = Vector2(156, 843)
-rotation = 0.07753239
-scale = Vector2(0.5, 0.5)
+rotation = 0.07753238
+scale = Vector2(0.49999997, 0.49999997)
 
-[node name="PineTree13" parent="." unique_id=1623954666 instance=ExtResource("2_e2o6t")]
+[node name="PineTree13" parent="trees" unique_id=1623954666 instance=ExtResource("2_e2o6t")]
 position = Vector2(632, 929)
 scale = Vector2(0.5, 0.5)
 
-[node name="PineTree14" parent="." unique_id=419750719 instance=ExtResource("2_e2o6t")]
+[node name="PineTree14" parent="trees" unique_id=419750719 instance=ExtResource("2_e2o6t")]
 position = Vector2(331, 814)
 scale = Vector2(0.5, 0.5)
 
-[node name="PineTree15" parent="." unique_id=1468174616 instance=ExtResource("2_e2o6t")]
+[node name="PineTree15" parent="trees" unique_id=1468174616 instance=ExtResource("2_e2o6t")]
 position = Vector2(1231, 854)
 scale = Vector2(0.5, 0.5)
 
 [node name="SpawnEnnemiesTimer" type="Timer" parent="." unique_id=1442763031]
-wait_time = 0.3
+wait_time = 0.669
 autostart = true
 
 [node name="GameOverScreen" type="CanvasLayer" parent="." unique_id=164734740]
@@ -175,6 +178,26 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 155
 text = "Game Over"
+
+[node name="walls" type="Node" parent="." unique_id=1640062565]
+
+[node name="wall" parent="." unique_id=2022841123 instance=ExtResource("4_fc0e3")]
+position = Vector2(-156, 1408)
+scale = Vector2(6.3999996, 1)
+
+[node name="wall4" parent="." unique_id=220240155 instance=ExtResource("4_fc0e3")]
+position = Vector2(-156, -221)
+scale = Vector2(6.3999996, 1)
+
+[node name="wall2" parent="." unique_id=1181237004 instance=ExtResource("4_fc0e3")]
+position = Vector2(-213, 1385.0001)
+rotation = -1.5671036
+scale = Vector2(4.5219884, 0.83308727)
+
+[node name="wall3" parent="." unique_id=1495017366 instance=ExtResource("4_fc0e3")]
+position = Vector2(2119.0002, 1393.0001)
+rotation = -1.5671036
+scale = Vector2(4.5219884, 0.83308727)
 
 [connection signal="health_reach_zero" from="Player" to="." method="_on_player_health_reach_zero"]
 [connection signal="timeout" from="SpawnEnnemiesTimer" to="." method="_on_spawn_ennemies_timer_timeout"]

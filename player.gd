@@ -3,8 +3,8 @@ extends CharacterBody2D
 signal health_reach_zero
 
 const DAMMAGE_RATE = 15.0 # max damage per second
-var speed: int = 600
-var health: float = 100.0
+@export var speed: int = 600
+@export var health: float = 100.0
 
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
