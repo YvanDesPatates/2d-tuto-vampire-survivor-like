@@ -9,3 +9,8 @@ func spawn_enemy():
 
 func _on_spawn_ennemies_timer_timeout() -> void:
 	spawn_enemy()
+
+
+func _on_player_health_reach_zero() -> void:
+	$GameOverScreen.visible = true
+	get_tree().paused = true

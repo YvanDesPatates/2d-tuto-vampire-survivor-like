@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 signal health_reach_zero
 
-const DAMMAGE_RATE = 5.0 # max five damage per ennemies per second
+const DAMMAGE_RATE = 15.0 # max damage per second
 var speed: int = 600
 var health: float = 100.0
 
