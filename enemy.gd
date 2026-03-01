@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
-@onready var player: Node2D = %Player
-@onready var smoke_explosion = preload("res://smoke_explosion/smoke_explosion.tscn")
+@onready var player = get_node("/root/Game/Player")
 var speed: int = 300
 var health = 3
 
@@ -20,6 +19,6 @@ func take_damage():
 	if health == 0:
 		queue_free()
 		
-		var smoke_instance:Node2D = smoke_explosion.instantiate()
+		var smoke_instance:Node2D = preload("res://smoke_explosion/smoke_explosion.tscn").instantiate()
 		get_parent().add_child(smoke_instance)
 		smoke_instance.global_position = global_position

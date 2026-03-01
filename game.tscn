@@ -1,11 +1,18 @@
 [gd_scene format=3 uid="uid://b3u84076due2"]
 
 [ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://player.tscn" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://dususlr2yr63q" path="res://game.gd" id="1_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://dq3r015sr1uql" path="res://pine_tree.tscn" id="2_e2o6t"]
-[ext_resource type="PackedScene" uid="uid://v45siqi72g4b" path="res://enemy.tscn" id="3_feb5d"]
+
+[sub_resource type="Curve2D" id="Curve2D_7jktm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -140, -107, 0, 0, 0, 0, 2153, -88, 0, 0, 0, 0, 2165, 1367, 0, 0, 0, 0, -144, 1355, 0, 0, 0, 0, -148, -99)
+}
+point_count = 5
 
 [node name="Game" type="Node2D" unique_id=472559160]
 y_sort_enabled = true
+script = ExtResource("1_fc0e3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=656545523]
 layer = -1
@@ -17,6 +24,15 @@ offset_bottom = 1093.0
 [node name="Player" parent="." unique_id=1091988629 instance=ExtResource("1_80nbo")]
 unique_name_in_owner = true
 position = Vector2(939, 714)
+
+[node name="Path2D" type="Path2D" parent="Player" unique_id=911053680]
+position = Vector2(-962, -634)
+curve = SubResource("Curve2D_7jktm")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D" unique_id=170895937]
+unique_name_in_owner = true
+position = Vector2(-140, -107)
+rotation = 0.008285898
 
 [node name="PineTree" parent="." unique_id=684713034 instance=ExtResource("2_e2o6t")]
 position = Vector2(308, 285)
@@ -128,20 +144,8 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(1231, 854)
 scale = Vector2(0.5, 0.5)
 
-[node name="enemy" parent="." unique_id=1174927618 instance=ExtResource("3_feb5d")]
-position = Vector2(513, 794)
+[node name="SpawnEnnemiesTimer" type="Timer" parent="." unique_id=1442763031]
+wait_time = 0.3
+autostart = true
 
-[node name="enemy2" parent="." unique_id=1888492126 instance=ExtResource("3_feb5d")]
-position = Vector2(547, 867)
-
-[node name="enemy3" parent="." unique_id=1630954280 instance=ExtResource("3_feb5d")]
-position = Vector2(485, 626)
-
-[node name="enemy4" parent="." unique_id=985892905 instance=ExtResource("3_feb5d")]
-position = Vector2(335, 963)
-
-[node name="enemy5" parent="." unique_id=46323275 instance=ExtResource("3_feb5d")]
-position = Vector2(242, 701)
-
-[node name="enemy6" parent="." unique_id=111669587 instance=ExtResource("3_feb5d")]
-position = Vector2(1155, 753)
+[connection signal="timeout" from="SpawnEnnemiesTimer" to="." method="_on_spawn_ennemies_timer_timeout"]
