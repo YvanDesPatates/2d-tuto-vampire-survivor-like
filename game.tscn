@@ -130,3 +130,18 @@ scale = Vector2(0.5, 0.5)
 
 [node name="enemy" parent="." unique_id=1174927618 instance=ExtResource("3_feb5d")]
 position = Vector2(513, 794)
+
+[node name="enemy2" parent="." unique_id=1888492126 instance=ExtResource("3_feb5d")]
+position = Vector2(547, 867)
+
+[node name="enemy3" parent="." unique_id=1630954280 instance=ExtResource("3_feb5d")]
+position = Vector2(485, 626)
+
+[node name="enemy4" parent="." unique_id=985892905 instance=ExtResource("3_feb5d")]
+position = Vector2(335, 963)
+
+[node name="enemy5" parent="." unique_id=46323275 instance=ExtResource("3_feb5d")]
+position = Vector2(242, 701)
+
+[node name="enemy6" parent="." unique_id=111669587 instance=ExtResource("3_feb5d")]
+position = Vector2(1155, 753)
