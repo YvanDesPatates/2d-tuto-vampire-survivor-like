@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dususlr2yr63q" path="res://game.gd" id="1_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://dq3r015sr1uql" path="res://pine_tree.tscn" id="2_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://dc1ta2hd88ke" path="res://wall.tscn" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://dwib6q4b566dp" path="res://little_friend.tscn" id="5_7jktm"]
 
 [sub_resource type="Curve2D" id="Curve2D_7jktm"]
 _data = {
@@ -198,6 +199,9 @@ scale = Vector2(4.5219884, 0.83308727)
 position = Vector2(2119.0002, 1393.0001)
 rotation = -1.5671036
 scale = Vector2(4.5219884, 0.83308727)
+
+[node name="LittleFriend" parent="." unique_id=1376033630 instance=ExtResource("5_7jktm")]
+position = Vector2(1098, 933)
 
 [connection signal="health_reach_zero" from="Player" to="." method="_on_player_health_reach_zero"]
 [connection signal="timeout" from="SpawnEnnemiesTimer" to="." method="_on_spawn_ennemies_timer_timeout"]

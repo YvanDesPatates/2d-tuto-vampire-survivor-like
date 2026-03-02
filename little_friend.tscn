@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dwib6q4b566dp"]
+
+[ext_resource type="Script" uid="uid://bufgml4mqbx3w" path="res://little_friend.gd" id="1_2ber1"]
+[ext_resource type="PackedScene" uid="uid://covdhtidpca7b" path="res://characters/slime/slime_yellow.tscn" id="1_exhcc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2ber1"]
+radius = 32.140316
+
+[node name="LittleFriend" type="CharacterBody2D" unique_id=1376033630]
+collision_layer = 0
+collision_mask = 3
+script = ExtResource("1_2ber1")
+
+[node name="SlimeYellow" parent="." unique_id=2008890567 instance=ExtResource("1_exhcc")]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1196906564]
+position = Vector2(0, -16)
+shape = SubResource("CircleShape2D_2ber1")
+
+[node name="HitBox" type="Area2D" parent="." unique_id=903254674]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox" unique_id=152024723]
+position = Vector2(0, -16)
+shape = SubResource("CircleShape2D_2ber1")
