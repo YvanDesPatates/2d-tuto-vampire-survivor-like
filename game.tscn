@@ -199,22 +199,22 @@ text = "Game Over"
 [node name="walls" type="Node" parent="." unique_id=1640062565]
 
 [node name="wall" parent="walls" unique_id=2022841123 instance=ExtResource("4_fc0e3")]
-position = Vector2(-156, 1408)
-scale = Vector2(6.3999996, 1)
+position = Vector2(-562, 1575)
+scale = Vector2(8.599998, 1)
 
 [node name="wall4" parent="walls" unique_id=220240155 instance=ExtResource("4_fc0e3")]
-position = Vector2(-156, -221)
-scale = Vector2(6.3999996, 1)
+position = Vector2(-543, -357)
+scale = Vector2(8.581656, 1)
 
 [node name="wall2" parent="walls" unique_id=1181237004 instance=ExtResource("4_fc0e3")]
-position = Vector2(-213, 1385.0001)
+position = Vector2(-618.99994, 1543.9999)
 rotation = -1.5671036
-scale = Vector2(4.521989, 0.8330873)
+scale = Vector2(5.362, 0.773)
 
 [node name="wall3" parent="walls" unique_id=1495017366 instance=ExtResource("4_fc0e3")]
-position = Vector2(2119.0002, 1393.0001)
+position = Vector2(2498, 1548.9999)
 rotation = -1.5671036
-scale = Vector2(4.521989, 0.8330873)
+scale = Vector2(5.3621306, 0.8330873)
 
 [connection signal="health_reach_zero" from="Player" to="." method="_on_player_health_reach_zero"]
 [connection signal="timeout" from="SpawnEnnemiesTimer" to="." method="_on_spawn_ennemies_timer_timeout"]

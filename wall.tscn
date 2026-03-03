@@ -10,3 +10,10 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=12379514]
 position = Vector2(173.5, 2.5)
 shape = SubResource("RectangleShape2D_oh6kn")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1183503120]
+offset_left = -7.656251
+offset_top = -9.0
+offset_right = 356.40628
+offset_bottom = 16.0
+color = Color(0.60015595, 0.22918257, 0.43148935, 1)
