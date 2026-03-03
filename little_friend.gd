@@ -29,3 +29,8 @@ func define_target_and_values():
 	if random_target:
 		random_target.queue_free()
 	random_target = target_giver.get_random_target()
+
+func _on_hit_box_body_entered(body: Node2D) -> void:
+	if body.has_method("take_damage"):
+		body.take_damage()
+		%SlimeYellow.play_hurt()

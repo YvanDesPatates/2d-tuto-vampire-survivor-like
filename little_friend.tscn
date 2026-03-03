@@ -8,7 +8,6 @@ radius = 32.140316
 
 [node name="LittleFriend" type="CharacterBody2D" unique_id=1376033630]
 collision_layer = 0
-collision_mask = 3
 script = ExtResource("1_2ber1")
 
 [node name="SlimeYellow" parent="." unique_id=2008890567 instance=ExtResource("1_exhcc")]
@@ -25,3 +24,5 @@ collision_mask = 2
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox" unique_id=152024723]
 position = Vector2(0, -16)
 shape = SubResource("CircleShape2D_2ber1")
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
