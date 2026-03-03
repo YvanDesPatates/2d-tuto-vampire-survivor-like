@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://dq3r015sr1uql" path="res://pine_tree.tscn" id="2_e2o6t"]
 [ext_resource type="Script" uid="uid://dpu1vdqieom1p" path="res://friends_target_path_follow_2d.gd" id="3_ryrav"]
 [ext_resource type="PackedScene" uid="uid://dc1ta2hd88ke" path="res://wall.tscn" id="4_fc0e3"]
-[ext_resource type="PackedScene" uid="uid://dwib6q4b566dp" path="res://little_friend.tscn" id="5_7jktm"]
 
 [sub_resource type="Curve2D" id="Curve2D_7jktm"]
 _data = {
@@ -47,7 +46,6 @@ rotation = 0.008285898
 curve = SubResource("Curve2D_ryrav")
 
 [node name="FriendsTargetPathFollow2D" type="PathFollow2D" parent="Player/FriendsTargetPath2D" unique_id=138428856]
-unique_name_in_owner = true
 position = Vector2(-912.39386, 7.3116817)
 rotation = -1.5619076
 progress = 4859.81
@@ -199,26 +197,23 @@ text = "Game Over"
 
 [node name="walls" type="Node" parent="." unique_id=1640062565]
 
-[node name="wall" parent="." unique_id=2022841123 instance=ExtResource("4_fc0e3")]
+[node name="wall" parent="walls" unique_id=2022841123 instance=ExtResource("4_fc0e3")]
 position = Vector2(-156, 1408)
 scale = Vector2(6.3999996, 1)
 
-[node name="wall4" parent="." unique_id=220240155 instance=ExtResource("4_fc0e3")]
+[node name="wall4" parent="walls" unique_id=220240155 instance=ExtResource("4_fc0e3")]
 position = Vector2(-156, -221)
 scale = Vector2(6.3999996, 1)
 
-[node name="wall2" parent="." unique_id=1181237004 instance=ExtResource("4_fc0e3")]
+[node name="wall2" parent="walls" unique_id=1181237004 instance=ExtResource("4_fc0e3")]
 position = Vector2(-213, 1385.0001)
 rotation = -1.5671036
-scale = Vector2(4.5219884, 0.83308727)
+scale = Vector2(4.521989, 0.8330873)
 
-[node name="wall3" parent="." unique_id=1495017366 instance=ExtResource("4_fc0e3")]
+[node name="wall3" parent="walls" unique_id=1495017366 instance=ExtResource("4_fc0e3")]
 position = Vector2(2119.0002, 1393.0001)
 rotation = -1.5671036
-scale = Vector2(4.5219884, 0.83308727)
-
-[node name="LittleFriend" parent="." unique_id=1376033630 instance=ExtResource("5_7jktm")]
-position = Vector2(1098, 933)
+scale = Vector2(4.521989, 0.8330873)
 
 [connection signal="health_reach_zero" from="Player" to="." method="_on_player_health_reach_zero"]
 [connection signal="timeout" from="SpawnEnnemiesTimer" to="." method="_on_spawn_ennemies_timer_timeout"]
