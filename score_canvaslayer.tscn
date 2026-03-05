@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://rur8iakfviy6"]
+
+[ext_resource type="Script" uid="uid://bfdmoqep8tup8" path="res://score_canvaslayer.gd" id="1_bg2ye"]
+[ext_resource type="Texture2D" uid="uid://e4gtsguue7fg" path="res://characters/slime/slime_body_hurt.png" id="2_ilw0f"]
+
+[node name="ScoreCanvaslayer" type="CanvasLayer" unique_id=1967349608]
+script = ExtResource("1_bg2ye")
+
+[node name="TimeScoreLabel" type="Label" parent="." unique_id=303443385]
+unique_name_in_owner = true
+offset_left = 1656.0
+offset_right = 1907.0
+offset_bottom = 134.0
+theme_override_colors/font_color = Color(0.6675615, 0.38548478, 0.7925331, 1)
+theme_override_font_sizes/font_size = 69
+text = "00:00"
+horizontal_alignment = 2
+
+[node name="KillScoreLabel" type="Label" parent="." unique_id=1579982130]
+unique_name_in_owner = true
+offset_left = 1656.0
+offset_top = 65.0
+offset_right = 1907.0
+offset_bottom = 199.0
+theme_override_colors/font_color = Color(0.6675615, 0.38548478, 0.7925331, 1)
+theme_override_font_sizes/font_size = 69
+text = "0"
+horizontal_alignment = 2
+
+[node name="FriendScorelabel" type="Label" parent="." unique_id=90623477]
+unique_name_in_owner = true
+offset_left = 1656.0
+offset_top = 129.0
+offset_right = 1907.0
+offset_bottom = 263.0
+theme_override_colors/font_color = Color(0.6675615, 0.38548478, 0.7925331, 1)
+theme_override_font_sizes/font_size = 69
+text = "0"
+horizontal_alignment = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="FriendScorelabel" unique_id=1817410979]
+unique_name_in_owner = true
+position = Vector2(176, 50.999996)
+scale = Vector2(0.4487913, 0.4487913)
+texture = ExtResource("2_ilw0f")
+
+[node name="SecondsTimer" type="Timer" parent="." unique_id=1368399897]
+autostart = true
+
+[connection signal="timeout" from="SecondsTimer" to="." method="onSecondPassed"]
