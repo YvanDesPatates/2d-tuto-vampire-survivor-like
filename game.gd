@@ -11,11 +11,11 @@ func spawn_enemy():
 	var enemy: Node2D = preload("uid://v45siqi72g4b").instantiate()
 	enemy.global_position = %PathFollow2D.global_position
 	add_child(enemy)
-	enemies_killed += 1
 
 
 func _on_spawn_ennemies_timer_timeout() -> void:
 	spawn_enemy()
+	higher_spawn_rate_if_necessary()
 
 
 func _on_player_health_reach_zero() -> void:
@@ -35,8 +35,12 @@ func on_ennemy_died(ennemy: Node2D):
 
 
 func higher_spawn_rate_if_necessary():
-	if enemies_created < 10:
+	enemies_created += 1
+	if enemies_created < 15:
 		return
 	
-	if enemies_killed > enemies_created:
+	if enemies_created - enemies_killed <= 4:
 		%SpawnEnnemiesTimer.wait_time -= 0.1
+	
+	enemies_killed = 0
+	enemies_created = 0
