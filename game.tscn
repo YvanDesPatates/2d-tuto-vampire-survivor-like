@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dq3r015sr1uql" path="res://pine_tree.tscn" id="2_e2o6t"]
 [ext_resource type="Script" uid="uid://dpu1vdqieom1p" path="res://friends_target_path_follow_2d.gd" id="3_ryrav"]
 [ext_resource type="PackedScene" uid="uid://dc1ta2hd88ke" path="res://wall.tscn" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://rur8iakfviy6" path="res://score_canvaslayer.tscn" id="4_ryrav"]
 
 [sub_resource type="Curve2D" id="Curve2D_7jktm"]
 _data = {
@@ -50,6 +51,9 @@ position = Vector2(-912.39386, 7.3116817)
 rotation = -1.5619076
 progress = 4859.81
 script = ExtResource("3_ryrav")
+
+[node name="ScoreCanvaslayer" parent="Player" unique_id=1967349608 instance=ExtResource("4_ryrav")]
+unique_name_in_owner = true
 
 [node name="trees" type="Node" parent="." unique_id=1630851232]
 

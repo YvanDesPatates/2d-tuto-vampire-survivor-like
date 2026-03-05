@@ -29,6 +29,9 @@ func on_ennemy_died(ennemy: Node2D):
 		var instance = LITTLE_FRIEND.instantiate()
 		instance.global_position = %Player.global_position - Vector2.DOWN
 		add_child(instance)
+		%ScoreCanvaslayer.on_friend_joined()
+	
+	%ScoreCanvaslayer.on_enemy_died()
 
 
 func higher_spawn_rate_if_necessary():
