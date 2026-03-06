@@ -8,7 +8,7 @@ var nb_friends: int = 0
 func onSecondPassed():
 	if seconds == 59:
 		minutes += 1
-		seconds == -1
+		seconds = -1
 	
 	seconds +=1
 	set_text()
