@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dpu1vdqieom1p" path="res://friends_target_path_follow_2d.gd" id="3_ryrav"]
 [ext_resource type="PackedScene" uid="uid://dc1ta2hd88ke" path="res://wall.tscn" id="4_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://rur8iakfviy6" path="res://score_canvaslayer.tscn" id="4_ryrav"]
+[ext_resource type="Script" uid="uid://b1lunh1v32bbq" path="res://game_over_screen.gd" id="6_eow3j"]
 
 [sub_resource type="Curve2D" id="Curve2D_7jktm"]
 _data = {
@@ -18,6 +19,12 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -908, -487, 0, 0, 0, 0, 869, -472, 0, 0, 0, 0, 865, 424, 0, 0, 0, 0, -916, 413, 0, 0, 0, 0, -908, -487)
 }
 point_count = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5wjh"]
+bg_color = Color(0.17855069, 0.3012074, 0.12050482, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vef74"]
+bg_color = Color(0.1882353, 0.58431375, 0.2509804, 1)
 
 [node name="Game" type="Node2D" unique_id=472559160]
 y_sort_enabled = true
@@ -174,7 +181,9 @@ autostart = true
 
 [node name="GameOverScreen" type="CanvasLayer" parent="." unique_id=164734740]
 unique_name_in_owner = true
+process_mode = 2
 visible = false
+script = ExtResource("6_eow3j")
 
 [node name="ColorRect" type="ColorRect" parent="GameOverScreen" unique_id=1175867856]
 anchors_preset = 15
@@ -200,6 +209,16 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 155
 text = "Game Over"
 
+[node name="ResetButton" type="Button" parent="GameOverScreen" unique_id=841268844]
+offset_left = 759.0
+offset_top = 642.0
+offset_right = 1139.0
+offset_bottom = 682.0
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_j5wjh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vef74")
+text = "restart for more jellys !!  (R)"
+
 [node name="walls" type="Node" parent="." unique_id=1640062565]
 
 [node name="wall" parent="walls" unique_id=2022841123 instance=ExtResource("4_fc0e3")]
@@ -222,3 +241,4 @@ scale = Vector2(5.3621306, 0.8330873)
 
 [connection signal="health_reach_zero" from="Player" to="." method="_on_player_health_reach_zero"]
 [connection signal="timeout" from="SpawnEnnemiesTimer" to="." method="_on_spawn_ennemies_timer_timeout"]
+[connection signal="pressed" from="GameOverScreen/ResetButton" to="." method="_on_restart_button_pressed"]

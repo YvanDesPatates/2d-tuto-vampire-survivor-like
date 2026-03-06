@@ -44,3 +44,12 @@ func higher_spawn_rate_if_necessary():
 	
 	enemies_killed = 0
 	enemies_created = 0
+
+
+func _on_restart_button_pressed() -> void:
+	get_tree().paused = false
+	get_tree().reload_current_scene()
+
+func _input(event: InputEvent) -> void:
+	if event.is_action("restart"):
+		_on_restart_button_pressed()
